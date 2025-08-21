@@ -1,0 +1,442 @@
+.pray-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298, #8b9dc3);
+    font-family: 'Times New Roman', serif;
+    padding: 20px;
+    position: relative;
+}
+
+.pray-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+            radial-gradient(circle at 20% 50%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 40% 80%, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.pray-booth {
+    background: linear-gradient(135deg, #ffffff, #f8f9fc);
+    border: 3px solid #d4af37;
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow:
+            0 20px 50px rgba(0,0,0,0.3),
+            inset 0 1px 0 rgba(255,255,255,0.6);
+    text-align: center;
+    max-width: 700px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.pray-booth::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(45deg, #d4af37, #ffd700, #d4af37);
+    border-radius: 30px;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+.university-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    border-radius: 15px;
+    border: 2px solid #d4af37;
+}
+
+.university-logo {
+    font-size: 48px;
+    margin-bottom: 15px;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+}
+
+.university-header h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    color: #ffd700;
+    letter-spacing: 2px;
+}
+
+.university-header h2 {
+    font-size: 20px;
+    margin: 8px 0;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.university-motto {
+    margin: 15px 0;
+    padding: 10px;
+    background: rgba(255, 215, 0, 0.2);
+    border-radius: 20px;
+    border: 1px solid #ffd700;
+}
+
+.university-motto span {
+    font-style: italic;
+    font-size: 14px;
+    color: #ffd700;
+    font-weight: 500;
+}
+
+.temple-section {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px dotted #d4af37;
+}
+
+.temple-section h3 {
+    color: #ffd700;
+    font-size: 22px;
+    margin-bottom: 8px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.temple-section p {
+    color: #e6e6e6;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.loading-ceremony {
+    text-align: center;
+    padding: 35px;
+    background: linear-gradient(135deg, #fff9e6, #ffe4b3, #ffd700);
+    border-radius: 20px;
+    margin-bottom: 25px;
+    border: 3px solid #d4af37;
+    box-shadow: inset 0 2px 10px rgba(212, 175, 55, 0.3);
+}
+
+.incense-animation {
+    font-size: 32px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.smoke, .fire, .lotus {
+    display: inline-block;
+}
+
+.smoke {
+    animation: float 3s ease-in-out infinite;
+}
+
+.fire {
+    animation: flicker 2s ease-in-out infinite alternate;
+}
+
+.lotus {
+    animation: bloom 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    33% { transform: translateY(-8px) rotate(2deg); }
+    66% { transform: translateY(-4px) rotate(-1deg); }
+}
+
+@keyframes flicker {
+    0% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.1); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes bloom {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.2) rotate(180deg); }
+}
+
+.loading-dots span {
+    animation: dots 1.5s infinite;
+    font-size: 24px;
+    color: #d4af37;
+    margin: 0 3px;
+}
+
+.loading-dots span:nth-child(2) { animation-delay: 0.3s; }
+.loading-dots span:nth-child(3) { animation-delay: 0.6s; }
+
+.pray-form {
+    margin: 30px 0;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #1e3c72;
+    font-size: 16px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid #d4af37;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background: #fafafa;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #1e3c72;
+    background: white;
+    box-shadow: 0 0 15px rgba(30, 60, 114, 0.2);
+}
+
+.form-group input.error,
+.form-group textarea.error {
+    border-color: #dc3545;
+    background-color: #fdf2f2;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #d4af37, #ffd700);
+    color: #1e3c72;
+    border: 3px solid #1e3c72;
+    padding: 18px 45px;
+    border-radius: 35px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-family: inherit;
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+}
+
+.submit-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, #ffd700, #ffed4e);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(212, 175, 55, 0.6);
+}
+
+.submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.wisdom-scroll {
+    margin-top: 35px;
+    background: linear-gradient(135deg, #f8f9fc, #ffffff);
+    border: 3px solid #d4af37;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 15px 35px rgba(30, 60, 114, 0.2);
+    position: relative;
+}
+
+.wisdom-scroll::before {
+    content: '🏮';
+    position: absolute;
+    top: -20px;
+    left: 30px;
+    background: white;
+    padding: 0 15px;
+    font-size: 28px;
+    border: 2px solid #d4af37;
+    border-radius: 50%;
+}
+
+.scroll-header {
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px dotted #d4af37;
+}
+
+.scroll-header h3 {
+    color: #1e3c72;
+    margin-bottom: 8px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.timestamp {
+    color: #666;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.wisdom-content {
+    margin: 25px 0;
+}
+
+.advice-decoration {
+    text-align: center;
+    font-size: 20px;
+    color: #d4af37;
+    margin: 15px 0;
+}
+
+.advice-text {
+    font-size: 18px;
+    line-height: 1.9;
+    color: #2c3e50;
+    background: linear-gradient(135deg, #ffffff, #f8f9fc);
+    padding: 30px;
+    border-radius: 15px;
+    border-left: 5px solid #d4af37;
+    border-right: 5px solid #d4af37;
+    font-style: italic;
+    text-align: justify;
+    box-shadow: inset 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.cursor {
+    animation: blink 1s infinite;
+    font-weight: bold;
+    color: #d4af37;
+    font-style: normal;
+}
+
+.blessing-footer {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 2px dotted #d4af37;
+}
+
+.blessing-footer p {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.blessing-footer p:first-child {
+    color: #1e3c72;
+    font-size: 16px;
+}
+
+.blessing-footer p:nth-child(2) {
+    color: #d4af37;
+    font-size: 16px;
+}
+
+.blessing-footer small {
+    color: #666;
+    font-style: italic;
+    font-size: 13px;
+}
+
+.error-shrine {
+    margin-top: 25px;
+    background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+    border: 3px solid #dc3545;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    color: #721c24;
+}
+
+.university-footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #d4af37;
+    text-align: center;
+    background: linear-gradient(135deg, #f8f9fc, #e6e9f5);
+    padding: 20px;
+    border-radius: 15px;
+    color: #1e3c72;
+}
+
+.university-footer p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.university-footer p:first-child {
+    font-size: 16px;
+    font-weight: bold;
+    color: #d4af37;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .pray-container {
+        padding: 10px;
+    }
+
+    .pray-booth {
+        padding: 25px;
+    }
+
+    .university-header h1 {
+        font-size: 22px;
+    }
+
+    .university-header h2 {
+        font-size: 18px;
+    }
+
+    .temple-section h3 {
+        font-size: 18px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+    .submit-btn {
+        padding: 15px 30px;
+        font-size: 16px;
+    }
+
+    .advice-text {
+        font-size: 16px;
+        padding: 20px;
+    }
+}
+
+@keyframes dots {
+    0%, 80%, 100% { opacity: 0; }
+    40% { opacity: 1; }
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
