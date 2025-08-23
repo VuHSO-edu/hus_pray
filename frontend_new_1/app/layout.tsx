@@ -4,9 +4,14 @@ import { GeistMono } from 'geist/font/mono'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
+  title: 'MIM PRAY ',
+  description: 'Created with VuHSO',
   generator: 'v0.app',
+    icons: {
+      icon: '/logo_mim.png',
+        shortcut: '/logo_mim.png',
+        apple: '/logo_mim.png',
+    },
 }
 
 export default function RootLayout({

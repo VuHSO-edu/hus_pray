@@ -33,7 +33,7 @@
     return start + Math.random() * (end - start)
   }
   function makeSmokeSprite(color) {
-    color = color || [24, 46.8, 48.2]
+    color = color || [200, 220, 255]
     var smokeSprite = document.createElement("canvas"),
       ctx = smokeSprite.getContext("2d"),
       data = ctx.createImageData(smokeSpriteSize, smokeSpriteSize),
@@ -81,6 +81,7 @@
     var ymin = particle.y - off
     var ymax = ymin + off * 2
     context.drawImage(smokeParticleImage, xmin, ymin, xmax - xmin, ymax - ymin)
+    context.globalAlpha = (1 - Math.abs(1 - (2 * particle.age) / particle.lifetime)) / 4
   }
   return function SmokeMachine(context, color) {
     var smokeParticleImage = makeSmokeSprite(color),

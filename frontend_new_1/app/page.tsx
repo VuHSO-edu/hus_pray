@@ -67,7 +67,7 @@ export default function PrayPage() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-black">
       <audio ref={audioRef} preload="auto" className="hidden">
         <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/backgound11%20%28mp3cut.net%29-jCixP7nt4Jiqb5x21RdWSAcCZX7r9n.mp3" type="audio/mpeg" />
       </audio>
