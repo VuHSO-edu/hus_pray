@@ -169,6 +169,8 @@ export default function PrayPage() {
               THẮP HƯƠNG
             </Button>
 
+
+
             {showSuccessMessage && (
               <div className="text-center mt-4 animate-pulse">
                 <p className="text-green-600 font-medium text-base opacity-0 animate-[fadeInOut_3s_ease-in-out_infinite]">
