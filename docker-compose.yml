@@ -1,0 +1,10 @@
+services:
+  react-app:
+    build: ./frontend_new_1
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend_new_1:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
