@@ -293,3 +293,32 @@
   -ms-user-select: none;
   user-select: none;
 }
+
+/* Ẩn Next.js debug overlay bottom left */
+[data-nextjs-dialog],
+[data-nextjs-footer] {
+  display: none !important;
+}
+/* Ẩn nút N nếu vẫn còn */
+div[style*="position: fixed"][style*="left"][style*="bottom"],
+button[aria-label="Open Next.js Overlay"],
+button[aria-label="Open Next.js preferences"] {
+  display: none !important;
+}
+
+/* Force hide Next.js dev overlay */
+[data-nextjs-dialog],
+[data-nextjs-dialog-overlay],
+[data-nextjs-dialog-content],
+nextjs-portal {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Hide any remaining dev indicators */
+[data-nextjs-toast],
+[data-nextjs-build-indicator] {
+  display: none !important;
+}
+
+
