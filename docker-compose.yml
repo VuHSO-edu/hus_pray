@@ -3,6 +3,7 @@ services:
     build: ./frontend_new_1
     ports:
       - "80:3000"
+      - "443:3000"
     volumes:
       - ./frontend_new_1:/app
       - /app/node_modules
